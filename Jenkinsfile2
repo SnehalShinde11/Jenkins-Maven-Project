@@ -6,7 +6,8 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'git@github.com:SnehalShinde11/Jenkins-Maven-Project.git'
+                branch: 'main', 
+                url: 'git@github.com:SnehalShinde11/Jenkins-Maven-Project.git'
             }
         }
 
