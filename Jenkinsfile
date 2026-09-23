@@ -15,7 +15,19 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn --batch-mode clean package'
+                sh 'mvn clean compile'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+
+        stage('Package') {
+            steps {
+                sh 'mvn package'
             }
         }
     }
