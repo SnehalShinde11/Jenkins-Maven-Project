@@ -4,12 +4,7 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                branch: 'main', 
-                url: 'git@github.com:SnehalShinde11/Jenkins-Maven-Project.git'
-            }
-        }
+
 
         stage('Build') {
             steps {
